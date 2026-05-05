@@ -1,0 +1,145 @@
+:root{
+    /* color */
+    --prime-color: #2b4450;
+    --secondar-color:#dfebed;
+    --third-color:#a3541b;
+    /* Spacing */
+    --s-1: 4px;
+    --s-2: 8px;
+    --s-3: 12px;
+    --s-4: 16px;
+    --s-5: 20px;
+    --s-6: 24px;
+    --s-8: 32px;
+    --s-10: 40px;
+    --s-12: 48px;
+
+    /* text */
+    --t-sm: 14px;
+    --t-base: 16px;
+    --t-lg: 20px;
+    --t-xl: 24px;
+    --t-2xl: 32px;
+    --t-3xl: 40px;
+}
+*{
+    border:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    box-sizing: border-box;
+    background-color:var(--secondar-color);
+}
+a{
+    color:black;
+    text-decoration:none;
+}
+.btn{
+    padding:var(--s-1) var(--s-2);
+    border:2px solid;
+    border-radius:20px;
+}
+/* header  */
+header{
+    margin-top: var(--s-2);
+    display: flex;
+    padding: var(--s-3);
+    justify-content: space-between;
+    font-weight: bold;
+}
+.header-logo{
+    padding: var(--s-1) var(--s-2);
+    border-radius: var(--s-1);
+    background-color:var(--third-color);
+    color:white;
+}
+header a{
+    margin:0px var(--s-2);
+}
+.logn{
+    border-color:var(--prime-color);
+}
+.signup{
+    background-color: var(--prime-color);
+    color:white;
+}
+
+/* header end  */
+.hero{
+    width:100%;
+    height: 90vh;
+    display: flex;
+}
+.hero-A{
+    width: 60%;
+    padding: var(--s-4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.hero-A h1{
+    font-size:5dvw;
+}
+.hero-A p{
+    font-size: var(--t-lg);
+    letter-spacing:1px;
+    color: #828282;
+}
+.hero-A-link{
+    width: fit-content;
+    padding:var(--s-3) var(--s-6);
+    border-radius: var(--s-3);
+    color:white;
+    background-color: var(--prime-color);
+    display: flex;
+    gap:var(--s-3);
+    align-items: center;
+}
+.hero-A-link >.btn{
+    padding: var(--s-3) var(--s-5);
+    border:3px solid var(--third-color);
+    color: var(--third-color);
+
+}
+.hero-A > .stat{
+    padding: var(--s-3);
+    font-size: var(--t-lg);
+    display: flex;
+    gap:8rem;
+    flex-wrap: wrap;
+}
+.hero-B{
+    width: 40%;
+    background-color: var(--prime-color);
+    border-radius: 24px 0px 0px 24px;
+    overflow: hidden;
+}
+.hero-B > img{
+    width: 500px;
+    position: absolute;
+    top:150px;
+    right: 20%;
+    border-radius: 20%;
+}
+
+/* footer  */
+footer{
+    color:white;
+    margin-top: var(--s-4);
+    padding:var(--s-3);
+    background-color: var(--prime-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer >ul {
+    margin:0;
+    padding: var(--s-2);
+    
+    list-style: none;
+    display: flex;
+    gap:var(--s-5);
+}

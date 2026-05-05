@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Details</title>
+  <style>
+    body { font-family: Arial; background:#f4f4f4; padding:30px; }
+    .box {
+      background:white;
+      padding:20px;
+      width:300px;
+      margin:auto;
+      border-radius:10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Book Submitted Successfully</h2>
+
+  <p><strong>Title:</strong> <%= book.title %></p>
+  <p><strong>Author:</strong> <%= book.author %></p>
+  <p><strong>Year:</strong> <%= book.year %></p>
+  <p><strong>Category:</strong> <%= book.category %></p>
+
+  <a href="/">Go Back</a>
+</div>
+
+</body>
+</html>

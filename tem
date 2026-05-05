@@ -1,0 +1,15 @@
+
+ 
+
+Write a program to build a Chat module using HTML CSS and JavaScript. 
+
+Write a program to display details from API “https://jsonplaceholder.typicode.com/users” using AJAX – XMLHttpRequest and JSON.  
+
+Write a program to serve static HTML files using the core http module. Also handle basic routes like /, /about, and /contact to open respective static files. 
+
+Create an application having one html form for taking user feedback as input. On submitting that form, append response in a file and read that text file to display its content in the console and also on a webpage use Async/Await and promise for proper output. 
+
+Create a simple server using express module and route application to different pages using PUT. GET, POST and DELETE. 
+
+Create a form for Library books entry and display submitted data on a new EJS-rendered page. 
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD App</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 30px;
+      background: #f4f4f4;
+    }
+
+    .box {
+      background: white;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 8px;
+    }
+
+    input, button {
+      padding: 10px;
+      margin: 5px 0;
+      width: 100%;
+    }
+
+    button {
+      background: #00adb5;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Express CRUD Operations</h1>
+
+<div class="box">
+  <h2>GET All Users</h2>
+  <button onclick="getUsers()">Fetch Users</button>
+  <pre id="all"></pre>
+</div>
+
+<div class="box">
+  <h2>GET User By ID</h2>
+  <input id="gid" placeholder="User ID">
+  <button onclick="getUser()">Get User</button>
+  <pre id="single"></pre>
+</div>
+<div class="box">
+  <h2>POST User</h2>
+  <input id="pname" placeholder="Name">
+  <button onclick="createUser()">Create</button>
+  <pre id="post"></pre>
+</div>
+
+<div class="box">
+  <h2>PUT Update User</h2>
+  <input id="uid" placeholder="ID">
+  <input id="uname" placeholder="New Name">
+  <button onclick="updateUser()">Update</button>
+  <pre id="put"></pre>
+</div>
+
+<div class="box">
+  <h2>DELETE User</h2>
+  <input id="did" placeholder="ID">
+  <button onclick="deleteUser()">Delete</button>
+  <pre id="del"></pre>
+</div>
+
+<script>
+const base = "/users";
+
+async function getUsers() {
+  const res = await fetch(base);
+  const data = await res.json();
+  document.getElementById("all").textContent = JSON.stringify(data, null, 2);
+}
+
+async function getUser() {
+  const id = document.getElementById("gid").value;
+  const res = await fetch(`${base}/${id}`);
+  const data = await res.json();
+  document.getElementById("single").textContent = JSON.stringify(data, null, 2);
+}
+async function createUser() {
+  const name = document.getElementById("pname").value;
+
+  const res = await fetch(base, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name })
+  });
+
+  const data = await res.json();
+  document.getElementById("post").textContent = JSON.stringify(data, null, 2);
+}
+async function updateUser() {
+  const id = document.getElementById("uid").value;
+  const name = document.getElementById("uname").value;
+
+  const res = await fetch(`${base}/${id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name })
+  });
+
+  const data = await res.json();
+  document.getElementById("put").textContent = JSON.stringify(data, null, 2);
+}
+
+async function deleteUser() {
+  const id = document.getElementById("did").value;
+
+  const res = await fetch(`${base}/${id}`, {
+    method: "DELETE"
+  });
+
+  const data = await res.json();
+  document.getElementById("del").textContent = JSON.stringify(data, null, 2);
+}
+</script>
+
+</body>
+</html>
