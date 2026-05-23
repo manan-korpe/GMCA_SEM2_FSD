@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>College Page</title>
+
+</head>
+
+<body>
+    <form method="post" action="/">
+        Student name :
+        <input name="name" value="<%= student?.name || '' %>" placeholder="name" /><br />
+
+        <h3>College Details</h3>
+        College name :
+        <input name="college_name" value="<%= student?.college_name || '' %>" placeholder="name" /><br /><br />
+
+        College code :
+        <input name="college_code" value="<%= student?.college_code || '' %>" placeholder="code" /><br /><br />
+
+        College email :
+        <input type="email" name="college_email" value="<%= student?.college_email || '' %>"
+            placeholder="email" /><br /><br />
+        <button>Save</button>
+    </form><br/>
+    <form method="post" action="/forget">
+        <button type="submit">Forget</button>
+    </form>
+</body>
+
+</html>

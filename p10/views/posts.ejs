@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Page</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+        .blog {
+            border: 1px solid gray;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        h2 {
+            margin: 0;
+        }
+        h4 {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Blog Page</h1>
+    <% blogs.forEach((blog)=> { %>
+        <div class="blog">
+            <h2>Title : <%= blog.title %></h2>
+            <h4>Author : <%= blog.author %></h4>
+            <p><%= blog.blog %></p>
+        </div>
+    <% }) %>
+</body>
+</html>

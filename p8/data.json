@@ -1,0 +1,66 @@
+{
+  "quizTitle": "General Knowledge MCQ Quiz",
+  "totalQuestions": 5,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the capital of France?",
+      "options": [
+        "Berlin",
+        "Madrid",
+        "Paris",
+        "Rome"
+      ],
+      "correctAnswer": "Paris",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "question": "Which planet is known as the Red Planet?",
+      "options": [
+        "Earth",
+        "Mars",
+        "Jupiter",
+        "Venus"
+      ],
+      "correctAnswer": "Mars",
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "question": "Who wrote the play 'Hamlet'?",
+      "options": [
+        "William Shakespeare",
+        "Charles Dickens",
+        "Leo Tolstoy",
+        "Mark Twain"
+      ],
+      "correctAnswer": "William Shakespeare",
+      "difficulty": "medium"
+    },
+    {
+      "id": 4,
+      "question": "What is the chemical symbol for Gold?",
+      "options": [
+        "Ag",
+        "Au",
+        "Gd",
+        "Go"
+      ],
+      "correctAnswer": "Au",
+      "difficulty": "medium"
+    },
+    {
+      "id": 5,
+      "question": "Which data structure uses FIFO (First In First Out)?",
+      "options": [
+        "Stack",
+        "Queue",
+        "Tree",
+        "Graph"
+      ],
+      "correctAnswer": "Queue",
+      "difficulty": "hard"
+    }
+  ]
+}

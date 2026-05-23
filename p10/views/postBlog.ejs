@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Post Blog</title>
+</head>
+
+<body>
+  <form method="post">
+    Author : <input name="author" placeholder="Enter author"><br/><br/>
+    Title : <input name="title" placeholder="Enter title"><br/><br/>
+    Blog : <textarea name="blog" rows="4" style="resize:none;"></textarea><br/><br/>
+
+    <button>Submit</button>
+  </form>
+
+  <h4 id="message">
+  <% if(message){%>
+    <%= message %>
+  <% } %>
+  </h4>
+
+  <script>
+    setTimeout(()=>{
+        document.getElementById("message").innerText = "";
+    },2000);
+   </script>
+</body>
+
+</html>

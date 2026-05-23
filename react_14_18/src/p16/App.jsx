@@ -24,7 +24,7 @@ function App(){
         setPassword("");
     }
     return (
-    <div style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
+    <div style={{ height: "100vh", display: "flex", justifyContent: "start", alignItems: "start" }}>
         <form style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
             <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" />
             <input value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
